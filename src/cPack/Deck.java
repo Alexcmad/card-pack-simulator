@@ -2,7 +2,6 @@ package cPack;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.List;
 public class Deck {
     private ArrayList<Card> content = new ArrayList<Card>();
 
@@ -24,9 +23,7 @@ public class Deck {
         content.add(new Card(Rank.JOKER, Suit.HEARTS));
     }
 
-    public void shuffle(){
-
-    }
+    public void shuffle(){Collections.shuffle(content);}
 
     public boolean isEmpty(){
         return content.isEmpty();

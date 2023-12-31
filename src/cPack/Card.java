@@ -9,15 +9,18 @@ public class Card {
     public Card(Rank r, Suit s){
         rank = r;
         suit = s;
-        orientation = false;
+        orientation = true;
     }
 
     public void flip(){
-        orientation = true;
+        orientation = !orientation;
     }
 
     @Override
     public String toString() {
-        return ""+ suit + rank + suit + " " + orientation;
+        if (orientation)
+        return ""+ suit + rank + suit;
+        else
+            return "[Hidden]";
     }
 }
